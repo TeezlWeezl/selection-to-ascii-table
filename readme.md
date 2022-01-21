@@ -8,10 +8,10 @@ SendInput {LCtrl down}{x down}
 Sleep 100
 SendInput {x up}{LCtrl up}
 ClipWait, 1
-; Replacing all Whitespaces with § necessary, because Input String seperating at Whitespace when running script
-ipt := StrReplace(Format("{1:s}", Clipboard)," ","§")
+; Replacing all Whitespaces with · necessary, because Input String seperating at Whitespace when running script
+ipt := StrReplace(Format("{1:s}", Clipboard)," ","·")
 ; Run the Python script
-RunWait, python "C:\Users\thies\PycharmProjects\csv-clip2table\main.py" %ipt%
+RunWait, pythonw.exe "C:\Users\thies\PycharmProjects\csv-clip2table\main.py" %ipt%
 ; Pasting Selekction
 SendInput {LCtrl down}{v down}
 Sleep 100

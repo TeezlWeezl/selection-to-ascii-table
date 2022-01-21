@@ -4,7 +4,7 @@ import sys
 
 def genTable(data):
 
-  data = data.replace('\r','').replace('§', ' ').replace('##', '# #').split('\n')
+  data = data.replace('\r','').replace('·', ' ').replace('#', ' # ').split('\n')
   data = [line.split('#') for line in data]
   data = [[col.strip() for col in row] for row in data]
 
